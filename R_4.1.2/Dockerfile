@@ -67,6 +67,8 @@ RUN R -e "devtools::install_github('GreenleafLab/ArchR', ref='dev', repos = Bioc
 
 RUN R -e "install.packages(c('Cairo', 'Seurat', 'shinythemes', 'rhandsontable', 'optparse', 'tidyverse'))"
 
+RUN R -e "install.packages('BSgenome.Ggallus.NCBI.bGalGal1.mat.broiler.GRCg7b_1.0.1.tar.gz', repos = NULL, type = 'source')"
+
 # Download and install RStudio Server for Ubuntu 20.04
 COPY install_rstudio_mod3.sh /rocker_scripts/install_rstudio_mod3.sh
 
