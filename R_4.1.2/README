@@ -115,3 +115,4 @@ sing.sh -B /cfs/klemming/ r_archr Rscript "$my_script" --dir "$JOB_NAME" --name 
 4. Run the container on the cluster using `sing.sh` with appropriate options.
 
 This approach ensures flexibility during development and robust execution on the cluster.
+

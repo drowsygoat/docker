@@ -41,7 +41,11 @@ docker run -it -v $(pwd):/mnt drowsygoat/r_archr:1.0.3
 ## 2. Deploy the Container on the Dardel Cluster
 
 ### Pull the Docker Image with Singularity
-Convert the Docker container to a Singularity Image Format (SIF) file:
+Load Singularity module if not loaded
+```bash
+ml singularity
+```
+Pull the Docker container into a Singularity Image Format (SIF) file:
 ```bash
 singularity pull -F <output_filename>.sif docker://<repository>:<tag>
 ```
@@ -112,4 +116,4 @@ sing.sh -B /cfs/klemming/ r_archr Rscript "$my_script" --dir "$JOB_NAME" --name 
 1. Use Docker to create and test your container.
 2. Push the container to Docker Hub for deployment.
 3. Pull the container on the Dardel cluster using Singularity.
-4. Run the container on the cluster using `sing.sh` with appropriate options.
+4. Run the container on the cluster using `sing.sh` script  with appropriate options.
