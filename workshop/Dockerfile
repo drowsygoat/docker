@@ -80,8 +80,7 @@ RUN mkdir -p /usr/local/lib/R/etc && \
 RUN update-alternatives --install /usr/bin/python3 python3 /usr/bin/python3.8 	1 && \
     update-alternatives --install /usr/bin/python python /usr/bin/python3.8 1
 
-# Update pip to be specifically for Python 3.8
-RUN python3.8 -m pip install --upgrade pip && \
+# Update pip to be specifically for Python 3--upgrade pip && \
     python3.8 -m pip install numpy cython scipy scikit-learn hmmlearn macs3
 
 # Install R
