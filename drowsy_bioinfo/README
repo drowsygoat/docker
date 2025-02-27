@@ -1,2 +1,7 @@
-v1.0.0 --> v1.0.1 : bcl2fasta installed
+HISTORY
 alien -i bcl2fastq2-v2.20.0.422-Linux-x86_64.rpm
+alien -i bcl-convert-4.3.13-2.el7.x86_64.rpm
+
+curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
+unzip awscliv2.zip
+./aws/install
